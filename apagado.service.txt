@@ -1,0 +1,10 @@
+[Unit]
+Description=Enviar mensaje al apagar el sistema
+Before=shutdown.target halt.target reboot.target
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/bin/true
+ExecStop=/usr/local/bin/logout-notify.sh
+[Install]
+WantedBy=shutdown.target halt.target

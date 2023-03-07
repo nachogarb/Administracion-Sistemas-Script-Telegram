@@ -1,0 +1,9 @@
+#!/bin/bash
+
+BOT_TOKEN="6165552808:AAFFJ6s1ao7qpcmMKcVx6KAqgtCO_GQvOnA"
+GROUP_ID="1341530385"
+login_date="$(date +"%e %b %Y,%a %r")"
+URL="https://api.telegram.org/bot6165552808:AAFFJ6s1ao7qpcmMKcVx6KAqgtCO_GQvOnA/sedMessage"
+message="Se ha arrancado el dispositivo"$"$login_date"
+
+curl -s -X POST $URL -d chat_id=$GROUP_ID -d text="$message"

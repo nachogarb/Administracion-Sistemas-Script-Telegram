@@ -1,0 +1,9 @@
+[Unit]
+Description=Enviar mensaje al arrancar el sistema
+After=network-online.target
+Wants=network-online.target
+[Service]
+ExecStart=/usr/bin/bash /usr/local/bin/login-notify.sh
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
